@@ -9,6 +9,7 @@ module.exports = {
   webpack: {
     alias: {
       "@": path.join(path.resolve(__dirname, "./src/components")),
+      "@src": path.join(path.resolve(__dirname, "./src"))
     },
   },
 };
