@@ -1,8 +1,9 @@
 const todoFields = `
   title: String
   description: String
-  date: String
   checked: Boolean
+  updatedAt: String
+  createdAt: String
 `;
 
 export const todoTypes = `

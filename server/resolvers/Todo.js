@@ -1,13 +1,21 @@
 import { Todo } from "../database/models/index";
 
 export const todoQueries = {
-  todos: (root, args, ctx) => Todo.find({}),
+  todos: () => Todo.find({}),
+  todo: (_, { id }) => Todo.findById(id),
 };
 
 export const todoMutations = {
-  createTodo: async (root, { input }, ctx) => {
-    console.log(root);
+  createTodo: (_, { input }) => {
     const todo = Todo.create(input);
     return todo;
+  },
+  deleteTodo: async (_, { id }) => {
+    const deletedPortfolio = await Todo.findByIdAndDelete(id);
+    return deletedPortfolio._id;
+  },
+  updateTodo: async (_, { id, input}) => {
+    const updatedPortfolio = Todo.findByIdAndUpdate(id, input);
+    return updatedPortfolio;
   },
 };
