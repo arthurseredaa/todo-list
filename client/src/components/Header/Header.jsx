@@ -10,7 +10,9 @@ export const Header = () => {
           </span>
         </p>
         <nav className="flex flex-wrap items-center justify-center">
-          <Link to="/login" className="mr-5 hover:text-gray-900 cursor-pointer">Log in</Link>
+          <Link to="/login" className="mr-5 hover:text-gray-900 cursor-pointer">
+            Log in
+          </Link>
         </nav>
       </div>
     </header>

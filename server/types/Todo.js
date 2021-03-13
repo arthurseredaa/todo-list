@@ -4,6 +4,7 @@ const todoFields = `
   checked: Boolean
   updatedAt: String
   createdAt: String
+  user: ID
 `;
 
 export const todoTypes = `

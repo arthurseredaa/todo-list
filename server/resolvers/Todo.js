@@ -1,4 +1,4 @@
-import { Todo } from "../database/models/index";
+import { Todo } from "../database/models/Todo";
 
 export const todoQueries = {
   todos: () => Todo.find({}),

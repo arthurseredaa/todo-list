@@ -1,6 +1,5 @@
 import { TodoItem } from "@/TodoItem/TodoItem";
 import { useGetTodos } from "@src/apollo/actions";
-import { useState } from "react";
 
 export const TodoList = ({ handleShowModal }) => {
   const { error, data, loading } = useGetTodos();

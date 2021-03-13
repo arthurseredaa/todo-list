@@ -8,7 +8,7 @@ import { TodoForm } from "@/TodoForm/TodoForm";
 
 const AddTodo = ({ setShowModal }) => (
   <button
-    className="border-red-100 border-2 rounded px-4 py-2 hover:bg-red-100 transition-all uppercase w-40 mx-auto"
+    className="border-green-300 border-2 rounded px-4 py-2 hover:bg-green-300 transition-all uppercase w-40 mx-auto"
     onClick={() => setShowModal(true)}
   >
     Add todo
@@ -36,7 +36,11 @@ const Home = () => {
   return (
     <>
       <TodoModal showModal={showModal}>
-        <TodoForm closeModal={() => setShowModal(false)} {...editState} cancelEditMode={cancelEditMode} />
+        <TodoForm
+          closeModal={() => setShowModal(false)}
+          {...editState}
+          cancelEditMode={cancelEditMode}
+        />
       </TodoModal>
       <AddTodo setShowModal={setShowModal} />
       <TodoList handleShowModal={handleUpdateModal} />

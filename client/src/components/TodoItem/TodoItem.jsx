@@ -25,13 +25,13 @@ export const TodoItem = ({
         <p className="text-xs text-gray-500">Created at: {createdAt}</p>
         <div className="flex justify-around items-center w-2/3 mx-auto mt-6">
           <button
-            className="bg-red-500 hover:bg-red-600 transition-all rounded px-4 py-2 text-white"
+            className="border-2 border-red-300 hover:bg-red-300 transition-all rounded px-4 py-2"
             onClick={() => deleteTodo({ variables: { id: _id } })}
           >
             {deleting ? "Deleting..." : "Delete"}
           </button>
           <button
-            className="bg-green-500 hover:bg-green-600 transition-all rounded px-4 py-2 text-white"
+            className="border-2 border-blue-300 bg-blue-300 hover:bg-blue-400 transition-all rounded px-4 py-2"
             onClick={() => handleShowModal(_id)}
           >
             Update

@@ -29,9 +29,7 @@ export const Login = () => {
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-600">
                 Name
-                {errors.name?.message && (
-                  <p>{errors.name?.message}</p>
-                )}
+                {errors.name?.message && <p>{errors.name?.message}</p>}
               </label>
               <input
                 type="text"

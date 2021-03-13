@@ -1,9 +1,12 @@
-import { db } from "./database/index";
-import { resolvers } from "./resolvers/index.js";
-import { typeDefs } from "./types/index.js";
 import cors from "cors";
 import express from "express";
-const { ApolloServer, gql } = require("apollo-server-express");
+
+import { resolvers } from "./resolvers/index.js";
+import { typeDefs } from "./types/index.js";
+import { dbConnect } from "./database/index.js";
+const { ApolloServer } = require("apollo-server-express");
+
+dbConnect();
 
 const app = express();
 const server = new ApolloServer({ typeDefs, resolvers });
